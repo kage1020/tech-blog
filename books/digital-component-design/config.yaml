@@ -1,0 +1,10 @@
+title: "デジタル庁公開のデザインで考えるコンポーネント設計"
+summary: "一貫したデザインや操作性でウェブサイトやアプリを提供するための仕組み「デザインシステム」の構築のために，デジタル庁はデザインデータを公開しました．\nこのデータはコンポーネント設計と相性がよさそうだったので，ReactとTailwind CSSで実装する際の注意点や実装の仕方をまとめました．"
+topics: ["react", "tailwindcss", "typescript", "デジタル庁"]
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - intro
+  - what-is-design-system
+  - environment
