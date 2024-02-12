@@ -27,3 +27,9 @@ https://www.digital.go.jp/policies/servicedesign/designsystem/
 - TypeScriptの知識
 - Reactの知識
 - CSSおよびTailwind CSSの基本的な知識
+
+## 本書の構成
+
+## 完成形
+
+https://github.com/kage1020/DegitalAgencyDesignSystem-React
