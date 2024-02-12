@@ -2,7 +2,7 @@
 title: "環境構築"
 ---
 
-# 環境構築
+## 環境構築
 
 本書は設計に重きを置いているものの，実際に手を動かして確認したい方もいると思います．次章以降ではコード例も示していますので，ぜひ環境構築をすることをお勧めします．実装について興味がない方はこの章を読み飛ばしてください．
 
@@ -17,7 +17,7 @@ title: "環境構築"
 
 また，簡単に環境を構築するためにテンプレートを用意しました．
 
-https://github.com/kage1020/DegitalAgencyDesignSystem-React
+https://github.com/kage1020/DigitalAgencyDesignSystem-React
 
 :::details テンプレートの使い方
 1. テンプレートをcloneします．
@@ -36,11 +36,11 @@ https://github.com/kage1020/DegitalAgencyDesignSystem-React
 
 :::
 
-## Node.js のインストール
+### Node.js のインストール
 
 Node.js は JavaScript の実行環境です．まだインストールしていない場合は，[Node.js の公式サイト](https://nodejs.org/en) からインストーラをダウンロードしてインストールしてください．
 
-## プロジェクトの作成
+### プロジェクトの作成
 
 まず，プロジェクトを作成します．以下のコマンドを実行してください．
 
