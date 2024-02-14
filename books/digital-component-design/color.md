@@ -33,13 +33,25 @@ title: "カラーパレット"
 コントラスト比は，次のように計算されます．
 
 ```ts
+// R, G, B はそれぞれ 0 から 255 の整数
 const textColor = [R1, G1, B1];
 const backgroundColor = [R2, G2, B2];
 
-const L1 = 0.2126 * R1 + 0.7152 * G1 + 0.0722 * B1;
-const L2 = 0.2126 * R2 + 0.7152 * G2 + 0.0722 * B2;
+const luminance = (color: number[]) => {
+  const [R, G, B] = color.map(c => {
+    const s = c / 255;
+    return s <= 0.03928  ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+  });
+  return 0.2126 * R + 0.7152 * G + 0.0722 * B;
+};
 
-const contrast = (Math.max(L1, L2) + 0.05) / (Math.min(L1, L2) + 0.05);
+const contrast = (color1: number[], color2: number[]) => {
+  const L1 = luminance(color1);
+  const L2 = luminance(color2);
+  return (Math.max(L1, L2) + 0.05) / (Math.min(L1, L2) + 0.05);
+};
+
+const contrastRatio = contrast(textColor, backgroundColor);
 ```
 
 ![](/images/digital-component-design/contrast-color.png)
