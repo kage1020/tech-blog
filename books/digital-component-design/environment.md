@@ -595,9 +595,7 @@ export default tailwindConfig
 
 また，`src/index.css`の内容を以下に変更してください．
 
-:::details src/index.css
-
-```css
+```css:src/index.css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -632,8 +630,6 @@ export default tailwindConfig
     }
 }
 ```
-
-:::
 
 Storybookでダークモードに対応させる設定を行います．`.storybook/main.js`に以下の１行を追加してください．
 
@@ -743,7 +739,18 @@ module.exports = {
   "semi": false,
   "plugins": [
     "prettier-plugin-tailwindcss"
+  ],
+  "tailwindFunctions": [
+    "tv"
   ]
+}
+```
+
+VSCodeで開発を行い，[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)をインストールしている場合は，`.vscode/settings.json`を作成し，以下の内容をコピペしてください．
+
+```json:.vscode/settings.json
+{
+  "tailwindCSS.experimental.classRegex": ["[\"'`]([^\"'`]*).*?[\"'`]"]
 }
 ```
 
