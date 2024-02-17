@@ -12,3 +12,5 @@ chapters:
   - button
   - scroll-top
   - text-field
+  - text-area
+  - selector
