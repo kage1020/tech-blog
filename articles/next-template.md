@@ -50,18 +50,57 @@ https://next-auth.js.org/
 
 https://www.prisma.io/
 
-本家の「T3 Stack」では[tRPC](https://trpc.io/)を使っているが，正直Prismaの同じ型を使っていれば不要だと思う．なので，今回は導入を見送り．
+本家の「T3 Stack」では[tRPC](https://trpc.io/)を使っているが，正直Prismaの同じ型を使っていれば不要だと思う．Next.jsにServer Actionsが追加されたこともあり，内部APIだけならもっと柔軟なサーバーコードの設計ができるようになると思います．なので，今回は導入を見送り．
 
-```ts
+```ts:Prismaの型をそのまま使う
+// components/LoginForm.tsx
 import { User as PrismaUser } from '@prisma/client'
 
-export type User = Omit<PrismaUser, 'emailVerified' | 'image'>
+type User = Pick<PrismaUser, 'id' | 'email' | 'name'>
+export type LoginSchema = z.infer<typeof LoginSchema>
 
-// client
-const data = await axios.get<User>('/api/user')
+export default function LoginForm() {
+  onSubmit = async () => {
+    const res = await axios.post<LoginSchema, User>('/api/user', {
+      email,
+      password
+    })
+    // res は User 型
+    ...
+  }
+}
 ```
 
-ただ，素のfetch関数を使ってる場合とかは有用かも
+```ts:Server Actions
+// actions/user.ts
+"use server"
+
+export const getUserData = async (email: string, password: string) => {
+  return await prisma.user.findUnique({
+    where: {
+      email,
+      password
+    },
+    select: {
+      id: true,
+      email: true,
+      name: true
+    }
+  })
+}
+
+// components/LoginForm.tsx
+"use client"
+
+export default function LoginForm() {
+  onSubmit = async () => {
+    const res = await getUserData(email, password)
+    // res は User 型
+  }
+}
+```
+
+外部向けのAPIは引き続きAPI Routesを使うといいと思います．そのときにはtRPCは役に立つかもしれません．
 
 # SWR
 
