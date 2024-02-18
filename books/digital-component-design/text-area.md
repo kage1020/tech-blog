@@ -2,6 +2,10 @@
 title: "テキストエリア"
 ---
 
+| light | dark |
+| --- | --- |
+| ![](/images/digital-component-design/text-area-light.png) | ![](/images/digital-component-design/text-area-dark.png) |
+
 ## 実装
 
 :::details TextArea.tsx
