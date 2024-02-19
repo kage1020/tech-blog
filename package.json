@@ -4,16 +4,11 @@
   "description": "",
   "author": "",
   "devDependencies": {
-    "@qiita/qiita-cli": "^1.3.1"
+    "@qiita/qiita-cli": "^1.4.0"
   },
   "scripts": {
-    "qiita:preview": "qiita preview --root qiita",
-    "qiita:pull": "qiita pull --root qiita",
-    "qiita:new": "qiita new ${0}",
-    "zenn:preview": "zenn preview",
-    "zenn:new": "zenn new:article"
-  },
-  "dependencies": {
-    "zenn-cli": "^0.1.153"
+    "qiita:preview": "qiita preview",
+    "qiita:pull": "qiita pull",
+    "qiita:new": "qiita new ${0}"
   }
 }
