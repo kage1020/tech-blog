@@ -1,8 +1,0 @@
-title: "Minecraftを作ろう"
-summary: "Minecraftを作りながらJavaの基礎を学ぶ本です。"
-topics: ["Java", "Minecraft"]
-published: false
-price: 0
-chapters:
-  - environment
-  - example2
