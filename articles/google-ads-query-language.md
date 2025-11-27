@@ -61,9 +61,9 @@ gaql validate query.ts --format json
 ```
 
 ### 3. [gaql-vscode](https://marketplace.visualstudio.com/items?itemName=kage1020.gaql-vscode)
-リアルタイムバリデーション、補完、IntelliSenseを提供するVSCode拡張
+リアルタイムバリデーション、補完、IntelliSenseを提供するVS Code拡張
 
-![VSCode拡張のデモ](/images/google-ads-query-language/demo.gif)
+![VSCode拡張のデモ: GAQLクエリのリアルタイムバリデーションと補完の様子](/images/google-ads-query-language/demo.gif)
 
 ## 主な機能
 
@@ -71,7 +71,7 @@ gaql validate query.ts --format json
 
 テンプレートリテラル内のGAQLクエリをリアルタイムで検証します。例えば、存在しないフィールドを指定すると:
 
-![バリデーションエラーの例](/images/google-ads-query-language/validation-error.png)
+![バリデーションエラーの例: 存在しないフィールドが波線で示されている様子](/images/google-ads-query-language/validation-error.png)
 
 エラー箇所に波線が表示されます。
 
@@ -101,7 +101,7 @@ CLIでは`campaign.campaign_budget`のような修正候補を提案します。
 
 ### 補完
 
-![補完の例](/images/google-ads-query-language/completion.png)
+![補完の例 SELECT句でフィールド名の候補が表示されている様子](/images/google-ads-query-language/completion.png)
 
 `SELECT cam`と入力すると、そのリソースで使えるフィールドの候補が表示されます。campaignリソースなら`id`, `name`, `status`など50以上のフィールドがあり、全て覚えるのは無理なので、補完で探せるのは助かります。
 
@@ -109,7 +109,7 @@ CLIでは`campaign.campaign_budget`のような修正候補を提案します。
 
 ### ホバー情報
 
-![ホバー情報の例](/images/google-ads-query-language/hover.png)
+![ホバー情報の例: フィールド名にカーソルを合わせると型と説明が表示される様子](/images/google-ads-query-language/hover.png)
 
 フィールド名にカーソルを合わせると、型と説明が表示されます。Google Ads APIのフィールドは名前だけでは用途が分かりにくいものも多く、いちいちドキュメントを確認していたので、エディタ内で完結できるのは地味に便利です。
 
@@ -168,8 +168,6 @@ const query = `
 ```
 
 リアルタイムでエラーチェック、補完、型情報が表示されます。
-
-<!-- TODO: 実際の使用例のスクリーンショット -->
 
 ### CLI
 
