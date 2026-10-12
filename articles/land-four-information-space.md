@@ -113,7 +113,7 @@ https://youtu.be/093Nj7EIBUU?t=448
 
 https://useland.app?utm_source=zenn&utm_medium=article&utm_campaign=launch-2026
 
-![](land.png)
+![](/images/land-four-information-space/land.png)
 
 ファイルは２次元のキャンバス上に配置されます。内容が近いものは近くに、内容が全く異なるものは遠くに配置されます。また、ズームインすればよりファイルの関係性が明確に、ズームアウトすればファイル全体の位置感がわかります。3次元的な理解です。
 
